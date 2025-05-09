@@ -4,3 +4,4 @@ mangum
 pydantic
 boto3
 pinecone 
+dotenv
