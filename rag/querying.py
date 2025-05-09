@@ -3,10 +3,14 @@ import boto3
 from pinecone import Pinecone
 import uuid
 from dotenv import load_dotenv
+import os
 
+# Load environment variables from .env file (for local development)
+load_dotenv()
 
-aws_access_key_id = load_dotenv("aws_access_key_id")
-aws_secret_access_key = load_dotenv("aws_secret_access_key")
+# Retrieve AWS credentials from environment variables
+aws_access_key_id = os.getenv("aws_access_key_id")
+aws_secret_access_key = os.getenv("aws_secret_access_key")
 aws_region = "us-east-1"
 
 # Initialize Pinecone connection
