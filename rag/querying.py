@@ -21,7 +21,7 @@ if aws_secret_access_key is None or aws_access_key_id is None:
 pc = Pinecone(api_key="pcsk_5pEARi_DNbj63Mj7ABLU113t4z64p68KZeFwK5UoYMvRHzjWcGycbb3PUi5WNE1LsZ76vs")
 
 # Initialize Bedrock client
-bedrock = boto3.client(service_name='bedrock-runtime', region_name='us-east-1')
+bedrock = boto3.client(service_name='bedrock-runtime', region_name='us-east-1',aws_access_key_id=aws_access_key_id, aws_secret_access_key=aws_secret_access_key)
 
 # Pinecone index name
 index_name = "farmcredit"
