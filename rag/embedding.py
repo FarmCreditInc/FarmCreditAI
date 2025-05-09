@@ -293,4 +293,4 @@ faq_chunks = [
 ]
 
 # Call the function to embed and upsert chunks
-embed_and_upsert_chunks(faq_chunks)
+#embed_and_upsert_chunks(faq_chunks)

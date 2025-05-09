@@ -10,7 +10,7 @@ aws_secret_access_key = load_dotenv("aws_secret_access_key")
 aws_region = "us-east-1"
 
 # Initialize Pinecone connection
-pc = Pinecone(api_key=load_dotenv("pinecone_api_key"))
+pc = Pinecone(api_key="pcsk_5pEARi_DNbj63Mj7ABLU113t4z64p68KZeFwK5UoYMvRHzjWcGycbb3PUi5WNE1LsZ76vs")
 
 # Initialize Bedrock client
 bedrock = boto3.client(service_name='bedrock-runtime', region_name='us-east-1')
@@ -172,4 +172,4 @@ def rag_pipeline(query):
         return "Sorry, an error occurred while processing your query. Please try again."
 
 
-print(rag_pipeline("Hi there, Describe you in 5 words?"))
+#print(rag_pipeline("Hi there, Describe you in 5 words?"))
