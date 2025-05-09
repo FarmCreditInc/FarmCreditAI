@@ -13,6 +13,10 @@ aws_access_key_id = os.getenv("aws_access_key_id")
 aws_secret_access_key = os.getenv("aws_secret_access_key")
 aws_region = "us-east-1"
 
+if aws_secret_access_key is None or aws_access_key_id is None:
+    print("AWS credentials not found in environment variables.")
+    raise ValueError("Please set AWS credentials in the environment variables.")
+
 # Initialize Pinecone connection
 pc = Pinecone(api_key="pcsk_5pEARi_DNbj63Mj7ABLU113t4z64p68KZeFwK5UoYMvRHzjWcGycbb3PUi5WNE1LsZ76vs")
 
