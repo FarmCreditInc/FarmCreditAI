@@ -81,4 +81,19 @@ class CreditScoreRequestModel(BaseModel):
 
 class QueryFAQRequestModel(BaseModel):
     query: str
-    
+
+class UserInfo(BaseModel):
+    name: str
+    wallet_balance: float
+    available_loans: List[LoanContract]
+    credit_score: float
+
+class Context(BaseModel):
+    message_position: int
+    sender: str
+    message: str
+
+class ConversationRequestModel(BaseModel):
+    user_info: UserInfo
+    query: str
+    context: List[Context]
