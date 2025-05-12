@@ -122,10 +122,13 @@ def generate_answer(query,conversation_trail,user_info,retrieved_chunks,bedrock=
         The position of the message in the conversation trail is indicated by the message_position field. The sender field indicates who sent the message (user or assistant).
 
         Keep your responses concise and relevant to the user's query. Keep the conversation friendly and engaging.
-        Keep the response as short as possible, and avoid unnecessary details.
+        This is a conversation so keep the responses to one or two sentences at most.
+        
 
         Use the following context to answer the user's query concisely and accurately. 
         If the context doesn't fully address the query, provide a general response based on FarmCredit's mission and services.
+
+        Users with missing user_info are users that haven't signed up or not signed in on FarmCredit. So if they ask for there detailed, prompt them to sign in or up
 
         You are to response as FarmCredit, Do not mention that you are an AI model and do not say that you got the information from the context or the conversation trail.
 Context:

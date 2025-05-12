@@ -1,5 +1,5 @@
 from pydantic import BaseModel
-from typing import List, Dict
+from typing import List, Dict, Optional
 from datetime import datetime
 
 class Farmer(BaseModel):
@@ -94,6 +94,6 @@ class Context(BaseModel):
     message: str
 
 class ConversationRequestModel(BaseModel):
-    user_info: UserInfo
+    user_info: Optional[UserInfo]
     query: str
     context: List[Context]
