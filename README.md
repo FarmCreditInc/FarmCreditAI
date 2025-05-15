@@ -71,6 +71,7 @@ This embedded AI system improves financial inclusion by combining actionable ins
 * **ML Pipeline:** Configure EventBridge to trigger monthly training Lambda and daily inference Lambda for SageMaker interaction.
 * **Embedded AI:** Connect the Farm Credit App API Gateway and Lambda to AWS Bedrock and Pinecone for intelligent query handling.
 
+For detailed API documentation, please check the [docs.md](docs.md) file.
 
 ---
 
