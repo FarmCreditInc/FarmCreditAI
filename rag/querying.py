@@ -172,6 +172,7 @@ def rag_pipeline(query):
     try:
         # Retrieve top 5 similar chunks
         retrieved_chunks = retrieve_similar_chunks(query, top_k=5)
+        print(retrieved_chunks)
         # Generate answer using retrieved chunks
         answer = generate_answer(query, retrieved_chunks)
         return answer
@@ -180,4 +181,4 @@ def rag_pipeline(query):
         return "Sorry, an error occurred while processing your query. Please try again."
 
 
-#print(rag_pipeline("Hi there, Describe you in 5 words?"))
+#print(rag_pipeline("frank and nancy are in diagreement of who should be the lead of data innovations"))

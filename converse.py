@@ -122,7 +122,7 @@ def generate_answer(query,conversation_trail,user_info,retrieved_chunks,bedrock=
         The position of the message in the conversation trail is indicated by the message_position field. The sender field indicates who sent the message (user or assistant).
 
         Keep your responses concise and relevant to the user's query. Keep the conversation friendly and engaging.
-        This is a conversation so keep the responses to one or two sentences at most.
+        This is a conversation so keep the responses to one sentence.
         
 
         Use the following context to answer the user's query concisely and accurately. 
@@ -202,4 +202,4 @@ def converse_pipeline(query, user_info, conversation_trail):
         return "Sorry, an error occurred while processing your query. Please try again."
 
 
-#print(rag_pipeline("Hi there, Describe you in 5 words?"))
+#print(converse_pipeline(query="",user_info=None,conversation_trail=None))
